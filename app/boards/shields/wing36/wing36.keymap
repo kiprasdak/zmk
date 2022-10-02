@@ -5,6 +5,7 @@
 #define DEFAULT 0
 #define X_NUM   1
 #define X_FUN   2
+#define X_NAV   3
 
 / {
     behaviors {
@@ -17,6 +18,10 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+    };
+
+    &caps_word {
+        continue-list = <UNDERSCORE MINUS>;
     };
 
     keymap {
@@ -39,7 +44,7 @@
                   &kp Q &kp W &kp E &kp R &kp T 						                                    &kp Y &kp U &kp I &kp O &kp P 
         &kp Z &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F &kp G			        	                &kp H &hm RSHFT J &hm RCTRL K &hm RALT L &hm RGUI SQT &kp SLASH
                         &kp X &kp C &kp V &kp B				                                          &kp N &kp M &kp COMMA &kp DOT 
-                                    &kp ESC &kp SPC &kp TAB	                       &kp RET &lt X_NUM BSPC &lt X_FUN DEL
+                                    &kp ESC &lt X_NAV SPC &kp TAB	                       &kp RET &lt X_NUM BSPC &lt X_FUN DEL
         >;
       };
         num_layer {
@@ -56,6 +61,14 @@
         &kp PSCRN &kp PAUSE_BREAK &kp F4 &kp F5 &kp F6 &kp F11		        	                                    &none &kp RSHFT &kp RCTRL &kp RALT &kp RGUI &none
                            &kp F1 &kp F2 &kp F3 &kp F10				                                          &none &none &none &none 
                                     &kp K_APP &kp SPC &kp TAB	                                        &none &none &none
+        >;
+      };
+        nav_layer {
+        bindings = <
+                  &none &none &none &none &none 						                                    &kp K_UNDO &kp K_PASTE &kp K_COPY &kp K_CUT &kp K_REDO 
+        &none &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none		        	                                    &kp LEFT &kp DOWN &kp UP &kp RIGHT &caps_word &kp INS
+                           &none &none &none &none				                                          &kp HOME &kp END &kp PG_UP &kp PG_DN 
+                                    &none &none &none	                                        &kp RET &kp BSPC &kp DEL
         >;
       };
   };
