@@ -65,7 +65,7 @@
       };
         nav_layer {
         bindings = <
-                  &none &none &none &none &none 						                                    &kp K_UNDO &kp K_PASTE &kp K_COPY &kp K_CUT &kp K_REDO 
+                  &none &none &none &none &none 						                                    &kp LC(Z) &kp LC(V) &kp LC(C) &kp LC(X) &kp LC(Y) 
         &none &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none		        	                                    &kp LEFT &kp DOWN &kp UP &kp RIGHT &caps_word &kp INS
                            &none &none &none &none				                                          &kp HOME &kp END &kp PG_UP &kp PG_DN 
                                     &none &none &none	                                        &kp RET &kp BSPC &kp DEL
