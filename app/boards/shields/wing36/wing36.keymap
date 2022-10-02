@@ -6,6 +6,7 @@
 #define X_NUM   1
 #define X_FUN   2
 #define X_NAV   3
+#define X_MED   4
 
 &caps_word {
     continue-list = <UNDERSCORE MINUS>;
@@ -44,7 +45,7 @@
                   &kp Q &kp W &kp E &kp R &kp T 						                                    &kp Y &kp U &kp I &kp O &kp P 
         &kp Z &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F &kp G			        	                &kp H &hm RSHFT J &hm RCTRL K &hm RALT L &hm RGUI SQT &kp SLASH
                         &kp X &kp C &kp V &kp B				                                          &kp N &kp M &kp COMMA &kp DOT 
-                                    &kp ESC &lt X_NAV SPC &kp TAB	                       &kp RET &lt X_NUM BSPC &lt X_FUN DEL
+                                    &lt X_MED ESC &lt X_NAV SPC &kp TAB	                       &kp RET &lt X_NUM BSPC &lt X_FUN DEL
         >;
       };
         num_layer {
@@ -69,6 +70,14 @@
         &none &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none		        	                                    &kp LEFT &kp DOWN &kp UP &kp RIGHT &caps_word &kp INS
                            &none &none &none &none				                                          &kp HOME &kp END &kp PG_UP &kp PG_DN 
                                     &none &none &none	                                        &kp RET &kp BSPC &kp DEL
+        >;
+      };
+        med_layer {
+        bindings = <
+                  &none &none &none &none &none 						                                    &none &none &none &none &none
+        &none &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none		        	                                &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &none &bt BT_CLR
+                           &none &none &none &none				                                          &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 
+                                    &none &none &none	                                        &kp C_STOP &kp C_PP &kp C_MUTE
         >;
       };
   };
