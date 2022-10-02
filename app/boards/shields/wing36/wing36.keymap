@@ -24,6 +24,9 @@
         };
     };
 
+    keymap {
+        compatible = "zmk,keymap";
+            
     //    default_layer {
     //        | SW2  | SW4  | SW7  | SW10 | SW13 |                              | SW21 | SW25 | SW28 | SW31 | SW34 |       
     // | SW1  | SW3  | SW5  | SW8  | SW11 | SW14 |                              | SW22 | SW26 | SW29 | SW32 | SW35 | SW36 |
